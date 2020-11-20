@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">The Study Buddy</string>
+    <string name="kotlin_group">by Kotlin Group</string>
+    <string name="add_question">Add Question</string>
+    <string name="take_quiz">Take Quiz</string>
+
+    <string name="question_header">Add A Question</string>
+    <string name="question_hint">Enter Question</string>
+</resources>

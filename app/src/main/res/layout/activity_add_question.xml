@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddQuestionActivity"
+    android:background="@drawable/add_question"
+    >
+
+    <EditText
+        android:id="@+id/question_edit_text"
+        android:layout_width="300dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="100dp"
+        android:backgroundTint="@color/silver"
+        android:gravity="center"
+        android:hint="@string/question_hint"
+        android:textColorHint="@color/white"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></EditText>
+
+    <TextView
+        android:id="@+id/question_label"
+        android:layout_width="300dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/question_header"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/question_edit_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/a_button"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:text="A"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/a_edit_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question_edit_text" />
+
+    <EditText
+        android:id="@+id/a_edit_text"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="28dp"
+        android:hint="Enter Text"
+        android:textColor="@color/white"
+        android:text=""
+        android:backgroundTint="@color/silver"
+        android:textColorHint="@color/silver"
+        app:layout_constraintBottom_toTopOf="@+id/b_edit_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question_edit_text"></EditText>
+
+    <TextView
+        android:id="@+id/b_text_view"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="B"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/a_button" />
+
+    <EditText
+        android:id="@+id/b_edit_text"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/silver"
+        android:hint="Enter Text"
+        android:textColor="@color/white"
+        android:textColorHint="@color/silver"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.549"
+        app:layout_constraintStart_toEndOf="@+id/b_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/a_edit_text"></EditText>
+
+    <TextView
+        android:id="@+id/c_text_view"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="C"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/b_text_view" />
+
+    <EditText
+        android:id="@+id/c_edit_text"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/silver"
+        android:hint="Enter Text"
+        android:text=""
+        android:textColor="@color/white"
+        android:textColorHint="@color/silver"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.549"
+        app:layout_constraintStart_toEndOf="@+id/c_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/b_edit_text">
+
+    </EditText>
+
+    <TextView
+        android:id="@+id/d_text_view"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="D"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/c_text_view" />
+
+    <EditText
+        android:id="@+id/d_edit_text"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/silver"
+        android:hint="Enter Text"
+        android:text=""
+        android:textColor="@color/white"
+        android:textColorHint="@color/silver"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.549"
+        app:layout_constraintStart_toEndOf="@+id/d_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/c_edit_text" />
+
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="240dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
+        android:text="Submit"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/d_edit_text" />
+
+    <EditText
+        android:id="@+id/answer_letter"
+        android:layout_width="98dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/silver"
+        android:backgroundTint="@color/silver"
+        android:gravity="center"
+        android:hint="Enter Answer\nLetter"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
+        app:layout_constraintEnd_toStartOf="@+id/submit_button"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/d_text_view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
