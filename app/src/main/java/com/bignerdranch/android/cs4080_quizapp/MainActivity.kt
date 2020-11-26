@@ -3,8 +3,11 @@ package com.bignerdranch.android.cs4080_quizapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
+import org.w3c.dom.Text
 
 /**
  * This Activity Will Be The Main Menu Of the Application
@@ -18,6 +21,7 @@ class MainActivity : AppCompatActivity()
     /**Private Data Fields */
     private lateinit var addQuestionButton: Button
     private lateinit var takeQuizButton: Button
+    private lateinit var numOfQuestionTextView: TextView
 
     //Getting a Reference to the Singleton
     private lateinit var singletonRef: StudyBuddyRepository
@@ -31,8 +35,11 @@ class MainActivity : AppCompatActivity()
         /**Initializing our Private Data Fields */
         this.addQuestionButton = findViewById(R.id.add_question_button) as Button
         this.takeQuizButton = findViewById(R.id.take_quiz_button) as Button
+        this.numOfQuestionTextView = findViewById(R.id.num_of_questions) as TextView
 
         this.singletonRef = StudyBuddyRepository.get()
+
+
 
         /**Setting Up Listeners So every time the user clicks a button t*/
 
@@ -60,4 +67,20 @@ class MainActivity : AppCompatActivity()
         }
 
     }
+
+
+    override fun onStart() {
+        super.onStart()
+        if(this.singletonRef.storage.size > 0)
+        {
+            Log.v("MAIN_ACTIVITY" , "Updated TExtView")
+            this.numOfQuestionTextView.text = "Number Of Questions: " + this.singletonRef.storage.size
+        }
+        else
+        {
+            Log.v("MAIN_ACTIVITY", "DIDNT CALL IT ")
+        }
+    }
+
+
 }
